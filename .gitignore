@@ -3,6 +3,7 @@
 
 #Security
 /**/settings.py
+/**/settings_deploy.py
 
 #data files
 *.json
@@ -11,3 +12,4 @@ upload_media
 .project
 .pydevproject
 dep_package
+
