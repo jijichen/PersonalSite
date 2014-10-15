@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+	
+	<div class="page-header">
+	  <h1>My Reading List </h1>
+	</div>	
+
+	<div class="container-fluid">
+		{% for k,v in dict.items %}
+			<div class = "well">
+				{{ k }}
+			</div>
+		{% endfor %}
+		{% for book in books %}
+		<div class="row-fluid">
+			<div class="span4">
+				<div class="thumbnail">
+					<img  src="{{ STATIC_URL }}{{ book.cover }}">
+					<h5 align="left">{{ book.title }}</h5>
+					<p align="right"><em>{{ book.Author }}</em></p>
+					<p>Complete:{{ book.complete }} %</p>
+					<div class="progress progress-striped active">
+					  <div class="bar" style="width: {{ book.complete }}%;"></div>
+					</div>
+				</div>
+			</div>
+			<div class="span8">
+				<!-- Duoshuo Comment BEGIN -->
+					<div class="ds-thread" data-thread-key="book.{{book.pk}}" data-limit="3"></div>
+				<!-- Duoshuo Comment END -->
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+{% endblock %}
+
+{% block extraJS %}
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"herder"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+{% endblock %}

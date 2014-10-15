@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="navbar navbar-static-to">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="#">My readings</a>
+					<ul class="nav">
+					{% for k,v in dict.items %}
+						<li>
+							<a href="#book.{{ k }}">{{ k }}</a>
+						</li>
+					{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		{% for k,v in dict.items %}
+		<div>
+			<a name="book.{{ k }}"></a>
+			<h3>{{ k }} <span class="pull-right"><small><a class="hide{{ k }}" >Hide</a></small></span></h3>
+
+			{% for book in v %}
+				<div class="row-fluid book{{ k }}">
+					<div class="span4">
+						<div class="thumbnail">
+							<img  src="{{ STATIC_URL }}{{ book.cover }}">
+							<h5 align="left">{{ book.title }}</h5>
+							<p align="right"><em>{{ book.Author }}</em></p>
+							<p>Complete:{{ book.complete }} %</p>
+							<div class="progress progress-striped active">
+							  <div class="bar" style="width: {{ book.complete }}%;"></div>
+							</div>
+						</div>
+					</div>
+					<div class="span8">
+						<!-- Duoshuo Comment BEGIN -->
+							<div class="ds-thread" data-url="{% url "blog:blog_list" %}" data-thread-key="book.{{book.pk}}" data-limit="3"></div>
+						<!-- Duoshuo Comment END -->
+					</div>
+					<hr>
+				</div>
+			{% endfor %}
+		</div>
+		{% endfor %}
+
+	</div>
+{% endblock %}
+
+{% block extraJS %}
+<script>
+var duoshuoQuery = {short_name:"herder"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+
+<script>
+$( document ).ready(function(){
+{% for k,v in dict.items %}
+	$("a.hide{{ k }}").click( function(){
+		//$("div.book{{ k }}").hide("slow");
+		if ($("a.hide{{ k }}").hasClass("is_hidden") == false){
+			$("div.book{{ k }}").slideToggle();
+			$("a.hide{{ k }}").html("Show");
+			$("a.hide{{ k }}").addClass("is_hidden");
+		} else {
+			$("div.book{{ k }}").slideToggle();
+			$("a.hide{{ k }}").html("Hide");
+			$("a.hide{{ k }}").removeClass("is_hidden");
+		}
+	});
+
+{% endfor %}
+});
+</script>
+{% endblock %}

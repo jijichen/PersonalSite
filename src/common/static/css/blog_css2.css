@@ -1,0 +1,100 @@
+h2.entry-title {
+  font-size: 31.5px;
+}
+.post-outer{
+background: #fff;
+border: 1px solid #e3e3e3;
+font-family:  'Open Sans', sans-serif;
+line-height: 2em;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+margin-bottom: 10px;
+}
+
+.post-info {
+	font-size: 12px;
+	margin: 0 0 15px 0px;
+	text-transform: uppercase;
+}
+.post h2, .post h3 {padding: 10px 0px; font-weight: normal; color: #666;}
+.post {padding: 10px;
+color: #666666;
+overflow: hidden;
+font-family:  'Open Sans', sans-serif;
+line-height: 2em;
+margin-bottom: 10px;
+margin: 10px;
+}
+
+img.alignleft {
+display: inline;
+margin: 0 15px 10px 0;
+float: left;
+border: 4px solid #eee;
+padding: 1px;
+background-color: #fff;
+}
+
+img.alignright {
+display: inline;
+margin: 0 15px 10px 0;
+float: right;
+border: 4px solid #eee;
+padding: 1px;
+background-color: #fff;
+}
+
+pre.brush-html {
+display: inline;
+padding: 0px;
+margin: 0 0 10px;
+border:0px;
+word-break: break-all;
+word-wrap: break-word;
+white-space: pre;
+white-space: pre-wrap;
+background-color: #fff;
+}
+
+
+.post .post-text {padding-bottom: 5px; clear: both; overflow: hidden;}
+.post h2.post-title { font-weight: bold;font-family: 'Open Sans', sans-serif;letter-spacing:-1px;}
+.post h2 a { font-weight: bold;font-family: 'Open Sans', sans-serif;color: #353737; letter-spacing:-1px;}
+.post h2 a:hover {color: #666;text-decoration: none;}
+.post ul.post-meta {color: #6b6969; clear: both; border-top: 1px solid #222020; border-bottom: 1px solid #222020; overflow: hidden; font-size: 12px; font-style: italic; padding: 5px 0px; list-style: none;}
+.post ul.post-meta li {padding-right: 20px; float: left;}
+.post ul.post-meta a {color: #0b6e69;}
+.post .post-comment {display: inline; background: url('http://1.bp.blogspot.com/_MkGBVwDEF84/TGedevmtX_I/AAAAAAAAEZY/I5fmryAKyP8/s1600/post_comment.jpg') no-repeat center; width: 33px; text-align: center; padding: 5px 0px 10px 0px; margin-top: 10px; float: right;}
+.post h2, .post h3 {padding: 10px 0px; font-weight: normal; color: #666;}
+.post h4, .post h5, .post h6 {padding: 10px 0px; font-size: 14px; font-weight: normal; color: #666;}
+.post blockquote {display: block; margin: 20px; padding: 0px 30px; background: url('http://4.bp.blogspot.com/_MkGBVwDEF84/TGedm_t7vJI/AAAAAAAAEZg/XJvOgN1hRuI/s1600/blockquote.png') no-repeat top left; font-style: italic; color: #999;}
+.left{padding:20px 25px 0px 0px;width:300px;float:right;}
+.sidebar h2{padding: 10px;
+color: #222222;
+font-family: 'Open Sans',sans-serif;
+font-size: 16px;
+font-weight: bold;
+line-height: 1.2em;
+margin-bottom: 6px;
+text-transform: uppercase;
+border-bottom: 1px solid #D3D3D3;
+}
+.sidebar .widget{font-size: 12px;
+color: #808080;
+margin: 0px 0px 10px 0px;
+padding-bottom: 10px;
+overflow: hidden;
+font-family: Verdana, 'Open Sans', sans-serif;}
+.sidebar .widget-content {padding:10px;margin:0;font-size:12px;color:#808080;}
+.sidebar ul {list-style-type: none;margin: 0 ;padding: 0;font-family: Verdana, 'Open Sans', sans-serif;}
+.sidebar ul a {color:#333;}
+.sidebar ul a:hover {color:#666666;}
+.sidebar li{list-style-type: none;margin: 0 ;padding: 0;}
+.sidebar ul li {height:100%;line-height:22px;float: left; clear: left;
+list-style-type: none;overflow:hidden;color:#808080;}
+.sidebar ul li  {text-decoration: none;padding: 0px 0px 0px 10px;display:block;
+border-bottom:1px solid #f9f9f9;}
+.sidebar a:link {color:#666666;}
+.sidebar a:hover {color: #D14F00;}
+

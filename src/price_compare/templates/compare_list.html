@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+	<div class="page-header">
+	  <h1>CSPP <small> Cross Site Price Parity</small></h1>
+	</div>
+
+	<div class="row">
+		
+		<div class="span8">
+			<div role="Intro">
+				<blockquote>
+				<p>This is a cross site price parity tool for your reference when you want to buy something in China. Look up your item and click on the item, it will lead you direcly to the item.</p>
+				</blockquote>
+			</div>
+		</div>
+		<div class="span4">
+			<div role="SearchItem" id="search_item">
+				<form class="form-search" method="post">
+				  {% csrf_token %}
+				  <input type="text" name="item_name" class="input-medium search-query">
+				  <button type="submit" class="btn">Compare</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	{% if items_taobao %}
+	<h2>Taobao.com</h2>
+		{% for row in items_taobao %}
+		<div class="row-fluid taobao_items">
+			<div class = "span12 thumbnails">
+			{% for item in row %}
+				<div class = "span3">
+					{% for key,value in item.items %}
+						{% if key == "item_href" %}
+							<a href="{{ value }}" class="thumbnail">
+						{% endif %}
+					{% endfor %}	
+					{% for key, value in item.items %}
+							{% if key == "pic_src" %}
+								<img data-src="holder.js/120x120" alt="" src={{ value }}>
+							{% endif %}
+							{% if key == "summary" %}
+								<h6>{{ value }}</h6>
+							{% endif %}
+							{% if key == "price" %}
+								<h5 class="price">¥ {{ value }}</h5>
+							{% endif %}
+	
+					{% endfor %}
+					</a>
+				</div>				
+			{% endfor %}
+			</ul>
+			</div>
+		</div>
+	{% endfor %}
+
+	<button class="btn btn-info" type="button" id="btn_more_taobao">More</button>
+	<button class="btn" type="button" id="btn_hide_taobao">Hide</button>
+	<button class="btn" type="button" id="btn_hideall_taobao">Hide All</button>
+	{% endif %}
+
+	{% if items_amazon %}
+	<h2>amazon.cn</h2>
+		{% for row in items_amazon %}
+		<div class="row-fluid amazon_items">
+			<div class = "span12 thumbnails">
+			{% for item in row %}
+				<div class = "span3">
+					{% for key,value in item.items %}
+						{% if key == "item_href" %}
+							<a href="{{ value }}" class="thumbnail">
+						{% endif %}
+					{% endfor %}	
+					{% for key, value in item.items %}
+							{% if key == "pic_src" %}
+								<img data-src="holder.js/120x120" alt="" src={{ value }}>
+							{% endif %}
+							{% if key == "summary" %}
+								<h6>{{ value }}</h6>
+							{% endif %}
+							{% if key == "price" %}
+								<h5 class="price">¥ {{ value }}</h5>
+							{% endif %}
+	
+					{% endfor %}
+					</a>
+				</div>				
+			{% endfor %}
+			</ul>
+			</div>
+		</div>
+	{% endfor %}
+
+	<button class="btn btn-info" type="button" id="btn_more_amazon">More</button>
+	<button class="btn" type="button" id="btn_hide_amazon">Hide</button>	
+	<button class="btn" type="button" id="btn_hideall_amazon">Hide All</button>
+	{% endif %}
+
+</div>
+{% endblock %}
+
+
+{% block extraJS %}
+<script>
+function show_more_taobao(){
+	$("div.taobao_items").fadeIn()
+}
+function hide_taobao() {
+	$("div.taobao_items:gt(1)").fadeOut()	
+}
+function hide_taobao_all () {
+	$("div.taobao_items").hide("slow")
+}
+function show_more_amazon(){
+	$("div.amazon_items").fadeIn()
+}
+function hide_amazon() {
+	$("div.amazon_items:gt(1)").fadeOut()	
+}
+function hide_amazon_all () {
+	$("div.amazon_items").hide("slow")
+}
+</script>
+<script>
+	$("div.taobao_items").hide()
+	$("div.taobao_items:lt(2)").fadeIn()
+	
+	$( document ).ready(function() {
+		$("button#btn_more_taobao").click(show_more_taobao);
+		$("button#btn_hide_taobao").click(hide_taobao);
+		$("button#btn_hideall_taobao").click(hide_taobao_all);
+
+		$("button#btn_more_amazon").click(show_more_amazon);
+		$("button#btn_hide_amazon").click(hide_amazon);
+		$("button#btn_hideall_amazon").click(hide_amazon_all);
+	});
+</script>
+{% endblock %}

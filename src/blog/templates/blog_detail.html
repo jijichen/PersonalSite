@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block extraCSS %}
+<link href="{% static "css/blog_css.css" %}" rel="stylesheet" type="text/css">
+<link href="{% static "css/blog_css2.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+	<ul class="breadcrumb">
+		<!-- % url "about:index" %}-->
+  		<li><a href="#">Home</a> <span class="divider">/</span></li>
+  		<li><a href="{% url "blog:blog_list" %}">Blogs</a> <span class="divider">/</span></li>
+  		<li><a href="{% url "blog:blog_list" blog_cate=blog.category %}">{{ blog.category }}</a> <span class="divider">/</span></li>
+  		<li class="active">{{ blog.title }}</li>
+	</ul>
+	<h1 align="center">{{ blog.title }}</h1>
+	
+	<div class="pull-right">
+		<span class="date published time" title={{ blog.timestamp }}>{{ blog.timestamp|date:"F d,Y"}}</span>
+	</div>
+	<hr>
+	{% autoescape off %}
+	<p>{{ blog.body }}</p>
+	{% endautoescape %}
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread" data-thread-key="blog.{{blog.pk}}" data-limit="3"></div>
+<!-- Duoshuo Comment END -->
+{% endblock %}
+
+{% block extraJS %}
+<script>
+var duoshuoQuery = {short_name:"herder"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+
+{% endblock %}

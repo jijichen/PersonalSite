@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block extraCSS%}
+<link href="{% static "css/about_css.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %} 
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span4 left">
+			<p align="center">
+				<img data-src="holder.js/300x200" src="{% static "img/yizhe.png" %}" alt="icon" width="200" style="border: 4px solid #eee;">  <!-- height="230"  -->
+			</p>
+			<h4 style="padding:10px;">Affiliations: </h4>
+			<ul>
+				<li>Institute of Artificial Intelligence</li>
+				<li>Computer Science and Technology department</li>
+				<li>Zhejiang Univ.</li>
+			</ul>
+
+			<h4>Contact: </h4>
+			<ul>
+				<li>Room 302,East wing,CGB Building </li>
+				<li>Yuquan Campus</li>
+				<li>Zhejiang University</li>
+			</ul>
+
+			<div class="socialnet">
+				<iframe width="90%" height="300" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=300&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=1&isWeibo=1&isFans=0&uid=1696842211&verifier=b3a5339e&dpc=1"></iframe>
+			</div>
+		</div>
+		<div class="right span8">
+			<div class="row">
+				<h2><u>About me</u></h2>
+				<p>
+					I'm Yizhe CHEN, an undergraduate student from Zhejiang University marjoring in Computer Science and Technology. This is my personal web site built as the final project when I took the Web development course given by <a href="http://www.cs.sfu.ca/~ggbaker/">Greg Baker</a>. I wrote my blogs here, share my readings and put some demos of my work. Please follow the left navigation and find out more about me. If you are interested in me, please contact me using e-mail or my social network.
+				</p>
+			</div>
+
+			<div class="row">
+				<div class="span6">
+					<h2><u>Education</u></h2>
+					<div class="media first">
+		  				<a class="pull-left" href="#">
+    						<img class="media-object small-log" src="{% static "img/h2zlogo.png" width="64px" height="64px" %}">
+		  				</a>
+		  				<div class="media-body">
+		    				<h5 class="media-heading">2007-2010</h5>
+		    				<p><em>No.2 High School of Hangzhou</em>, Zhejiang.</p>
+		    				<p><strong>High school graduation</strong></p>
+		  				</div>
+					</div>
+					<div class="media">
+		  				<a class="pull-left" href="#">
+    						<img class="media-object small-log" src="{% static "img/zjulogo.jpeg" width="64px" height="64px" %}">
+		  				</a>
+		  				<div class="media-body">
+		    				<h5 class="media-heading">2010-Present</h5>
+		    				<p><em>Zhejiang University</em>, Zhejiang.</p>
+		    				<p><strong>Undergraduate</strong></p>
+		  				</div>
+					</div>
+				</div>
+
+				<div class="span6">
+					<h2><u>Skills</u></h2>
+					<div class="skills">
+						<div class="skill1"><p>Python</p></div>
+						<div class="skill2"><p>C/C++</p></div>
+						<div class="skill3"><p>Java</p></div>
+						<div class="skill4"><p>Web Develop</p></div>
+						<div class="skill5"><p>Open CV</p></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<h2><u>Experience</u></h2>
+				<h5 style="color: #D0D0Df;">Vocational</h5>
+					<div class="media first">
+				<div class="media-body">
+					<h5 class="media-heading">2011-Present</h5>
+					<p><strong>Research Assistant </strong><em>Aritificial Intelligence Institute</em> Departmnet of CS, Zhejiang University.</p>
+					<p><strong>Supervisor:</strong> Prof.Hui QIAN</p>
+				</div>
+				</div>
+				<div class="media">
+					<div class="media-body">
+						<h5 class="media-heading">2012-2013</h5>
+						<p><strong>Project Leader </strong><em>Pedestrain Detection and Positioning, </em> Student Research Training Program 15th, Zhejiang University.</p>
+						<p><strong>Supervisor:</strong> Prof.Hui QIAN</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-body">
+						<h5 class="media-heading">2011</h5>
+						<p><strong>Independent implementer, </strong><em>A Micro CPU on FPGA, </em> Course Project, Zhejiang University.</p>
+						<p><strong>Independent implementer, </strong><em>GPS logger based on Arduino, </em>Summer course project, Zhejiang University.<a href="http://v.youku.com/v_show/id_XMzAwODQ2MDc2.html">[Demo]</a></p>
+					</div>
+				</div>
+				<br>
+				<h5 style="color: #D0D0Df;">Miscellaneous</h5>
+				<div class="media first">
+					<div class="media-body">
+						<h5 class="media-heading">2010-2012</h5>
+						<p><strong>Cameraman, </strong><em>Student Travel Association, </em> Zhejiang University.</p>
+					</div>
+				</div>
+			
+				<div class="media">
+					<div class="media-body">
+						<h5 class="media-heading">2010-2011</h5>
+						<p><strong>Member, </strong><em>Arduino Fans Club, </em> Zhejiang University.</p>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+
+
+{% endblock %}

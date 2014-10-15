@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block extraCSS %}
+<link href="{% static "css/blog_css.css" %}" rel="stylesheet" type="text/css">
+<link href="{% static "css/blog_css2.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<div class="main section container-fluid" id="main">
+	<div class="row-fluid">
+	<div class="widget Blog span8">
+		{% for post in posts %}
+		<div class="post-outer">
+			<div class="post hentry">
+				<h2 class="post-title entry-title">
+					<a href="{% url "blog:blog_detail" blog_id=post.pk %}">{{ post.title}}</a>
+				</h2>
+				<div class="post-header">
+				<div class="post-header-line-1"></div>
+				<div class="post-info">
+					Posted on: 
+					<span class="date published time" title={{ post.timestamp }}>{{ post.timestamp|date:"F d,Y"}}</span>
+					<span class="label label-info pull-right">{{ post.category }}</span>
+				</div>
+			</div>
+				{% if post.cover_src %}
+					<img width="200" height="200" src={{ post.cover_src }} class="alignleft post-image" alt="Grammer-Check">				
+				{% endif %}
+
+				<div class="summary"> <p>{{ post.body|removetags:"img"|striptags|truncatewords:150 }}</p> 
+				</div>
+
+				<div class="pull-right"><a href="{% url "blog:blog_detail" blog_id=post.pk %}">Read More</a></div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<div class="span4">
+		<div class="well" style="max-width: 340px; padding: 8px 0;background: #fff;">
+			<ul class="nav nav-list">
+  				<li class="nav-header">By Category</li>
+  				<ul class="nav nav-list">
+  					{% for cate in cates %}
+  						<li><a href="{% url "blog:blog_list" blog_cate=cate %}">{{ cate.cate }}</a></a></li>
+  					{% endfor %}
+  				</ul>
+  				<li class="nav-header">By Date</li>
+  				<ul class="nav nav-list">
+  					{% for year_dic in year_list %}
+  						{% for k,v in year_dic.items %}
+  							{% if k == "year" %}
+  					<li>{{ v }}</li>
+  								{% with current_year=v %}
+  						 <ul class = "nav nav-list">
+  									{% for k1,v1 in year_dic.items %}
+  										{% if v1 > 0 and k1 != "year" %}
+  											{% for k2,v2 in mon_dic_rev.items %}
+  												{% if k2 == k1 %}
+  							<li><a href="{% url "blog:blog_list" blog_year=current_year blog_month=v2 %}">{{ k1 }}({{ v1 }})</a></li>
+  												{% endif %}
+  											{% endfor %}
+  										{% endif %}
+  									{% endfor %}
+  						</ul>
+  								{% endwith %}
+  							{% endif %}
+  						{% endfor %}
+   					{% endfor %}
+  				</ul>
+			</ul>
+		</div>
+		<div class="well" style="max-width: 340px; padding: 8px 0;background: #fff;">
+			<p class="nav-header">Recent comments</p>
+			<ul class="ds-recent-comments" style="padding:8px 8px 8px 8px"></ul>
+			<ul class="ds-recent-visitors"></ul>
+		</div>
+	</div>
+	</div>
+</div>
+
+
+{% endblock %}
+
+{% block extraJS %}
+<!--多说js加载开始，一个页面只需要加载一次 -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"herder"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+  	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!--多说js加载结束，一个页面只需要加载一次 -->
+
+{% endblock %}
