@@ -1,11 +1,13 @@
-*.pyc 
+#python specific
+/**/*.pyc
 
-settings.py 
+#Security
+/**/settings.py
 
-*.json 
-
-*~ 
-
-DEADJOE 
-
-media/temp 
+#data files
+*.json
+*.db
+upload_media
+.project
+.pydevproject
+dep_package
