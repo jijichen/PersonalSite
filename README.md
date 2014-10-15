@@ -1,21 +1,21 @@
 ## How to set up
-------------------
+
 0.  Install the packages needed by this project
 	Install django and related python package
 
-    '''sh
+    ```sh
     pip install django
     pip install PIL
     pip install django-ckeditor
     pip install pyquery
     pip install django-imagekit
-    '''
+    ```
 
 	On Ubuntu:
-    '''sh
+    ```sh
 	sudo apt-get install python-dev
 	sudo apt-get install libxml2-dev libxslt-dev
-    '''
+    ```
 
 1. Run the Project
 	1. change path to Project/src.
@@ -30,29 +30,29 @@
 
 
 ##About the site
-------------------
+
    This is a personal web site for myself to use in future. So I use django's default
  admin interface to manage the data and all visitors can do is to view the site and
  leave comments.
    To log in the admin site the current Username/Password is : "chen" "123456"
 
    There are 5 parts of content in my site, they are
-   """
+   ```
    Project
      |___Home				#Home page, using a html to display my CV
      |___Blog				#My blog, managed by using django admin	interface
      |___Readings			#My reading list
      |___Photography		#My photography. Due to time limit, it is linked to another site
      |___Price Compare		#A cross site price parity site for price comparation.
-   """
+   ```
 
 
 ##Things I wrote
--------------------
-	as you can see in START UP STEPS, this site use some packages which are not written by myself.
-	Below are what I wrote:
 
-    '''
+  as you can see in START UP STEPS, this site use some packages which are not written by myself.
+Below are what I wrote:
+
+    ```
 	Blog
       |-- admin.py
       |-- forms.py
@@ -93,10 +93,10 @@
 	  |-- tests.py
 	  |-- urls.py
 	  `-- views.py
-    '''
+    ```
 
 #Additinal packages I used
-----------------------
+
 1. Duoshuo comment service.(internet conection needed)
 2. django-imagekit	(For image process)
 3. Python-PIL	  (For image process)
