@@ -1,30 +1,35 @@
-#START UP STEPS
+## How to set up
 ------------------
-0.Install the packages needed by this project
-	pip install django
+0.  Install the packages needed by this project
+	Install django and related python package
 
-	＃ If you are in Ubuntu:
+    '''sh
+    pip install django
+    pip install PIL
+    pip install django-ckeditor
+    pip install pyquery
+    pip install django-imagekit
+    '''
+
+	On Ubuntu:
+    '''sh
 	sudo apt-get install python-dev
 	sudo apt-get install libxml2-dev libxslt-dev
+    '''
 
-	pip install PIL
-	pip install django-ckeditor
-	pip install pyquery
-	pip install django-imagekit
-
-1.Run the Project
-	1.1 change path to Project/src.
-	1.2 Create database:
+1. Run the Project
+	1. change path to Project/src.
+	1. Create database:
 		"python manage.py syncdb"
-		(no need to enter the admin account which can be imported in 1.3)
-	1.3 Import initialization data from initialize_data.json
+		(no need to enter the admin account which can be imported in 1. 3)
+	1. Import initialization data from initialize_data.json
 		"python manage.py loaddata initialize_data.json"
-	1.4 Run the server
+	1. Run the server
 		"python manage.py runserver"
 
 
 
-#ABOUT THE PROJECT
+##About the site
 ------------------
    This is a personal web site for myself to use in future. So I use django's default
  admin interface to manage the data and all visitors can do is to view the site and
@@ -42,7 +47,7 @@
    """
 
 
-THINGS I WROTE
+##Things I wrote
 -------------------
 	as you can see in START UP STEPS, this site use some packages which are not written by myself.
 	Below are what I wrote:
@@ -92,10 +97,10 @@ THINGS I WROTE
 
 #Additinal packages I used
 ----------------------
-1.Duoshuo comment service.(internet conection needed)
-2.django-imagekit	(For image process)
-3.Python-PIL	  (For image process)
-4.django-ckeditor (rich text editor)
+1. Duoshuo comment service.(internet conection needed)
+2. django-imagekit	(For image process)
+3. Python-PIL	  (For image process)
+4. django-ckeditor (rich text editor)
 
 
 
