@@ -3,19 +3,22 @@
 0.  Install the packages needed by this project
 	Install django and related python package
 
+	On Ubuntu:
+    ```sh
+	sudo apt-get install python-dev
+	sudo apt-get install libxml2-dev libxslt-dev
+	sudo apt-get install python-lxml
+	sudo apt-get install python-pil
+    ```
+        
     ```sh
     pip install django
-    pip install PIL
     pip install django-ckeditor
     pip install pyquery
     pip install django-imagekit
     ```
 
-	On Ubuntu:
-    ```sh
-	sudo apt-get install python-dev
-	sudo apt-get install libxml2-dev libxslt-dev
-    ```
+
 
 1. Run the Project
 	1. change path to Project/src.
