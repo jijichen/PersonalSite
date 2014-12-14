@@ -6,7 +6,6 @@
 /**/settings_deploy.py
 
 #data files
-*.json
 *.db
 upload_media
 .project
