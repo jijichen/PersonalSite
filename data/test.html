@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-example41-production</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.1/angular.min.js"></script>
+  <script src="script.js"></script>
+
+
+
+</head>
+<body ng-app="HomePage">
+  <div ng-controller="ExpLoader">
+    <div ng-repeat="obj in exps">
+        <p>{{ obj.position }}</p>
+        <p>{{ obj.description }}</p>
+    </div>
+
+  </div>
+</body>
+</html>

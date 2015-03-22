@@ -1,0 +1,4 @@
+[
+{"position": "Distributed System Course Project", "description": "\n\u2022   Implement a Map-Reduce Facility similar to Hadoop.\n\u2022   Internal RESTful message and file passing module using embedded jetty.\n\u2022   Failure recovery and robust unit tests.", "orgnization": "Carnegie Mellon University", "title": "Map-Reduce Engine", "time": "Fall 2014"},
+{"position": "Mobile and Pervasive Computing Course Project", "description": "\n\u2022   Android wear and phone applications to synchronously collect accelerometer and heart rate data from smart watch and recoding a video from cell phone.\n\u2022   Plot raw data and analyzed results on android phone.\n\u2022   Detect movement and major events during the test and label on the video.", "orgnization": "Carnegie Mellon University", "title": "Multi-Sensored Sleep Quality Monitoring System", "time": "Fall 2014"}
+]
