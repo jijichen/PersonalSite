@@ -59,7 +59,13 @@
 
 <div class="experiences">
 
-
+  <script type="text/javascript">
+      Papa.parse('exp_full.csv', {
+          complete: function(results) {
+              console.log("Finished:", results.data);
+          }
+      });
+  </script>
   <div class="experience row">
     <div class="col-md-4">
       <h4>Avans Highschool</h4>

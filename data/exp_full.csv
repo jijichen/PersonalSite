@@ -1,35 +1,1 @@
-,type,organization ,time,title,inline-des,description,,
-,edu,Zhejiang University,2010 - 2014,Bachelorâ€™s degree - Computer Science & Technology ,,,,
-,edu,Carnegie Mellon University,2014 - 2015,Masterâ€™s degree - Information Technology (Mobility),,,,
-,careers,Insigma Hengtian Software Ltd,2013.11 - 2014.2,Software Engineer ,,"	â€¢	Participated in building a re-factorization and automated analysis tool for legacy financial system â€“ BlueMorpho. 
-	â€¢	Completed the Dataflow analysis module that slices out all the statements that influence a given variable of interest. 
-	â€¢	Encapsulated the Dataflow analysis module as a web service.
-	â€¢	Integrated with front end site and enhanced front end functions. ",,
-,projects,Carnegie Mellon University ,Fall 2014 ,"Map-Reduce Engine 
-",Distributed System Course Project ,"	â€¢	Implement a Map-Reduce Facility similar to Hadoop. 
-	â€¢	Internal RESTful message and file passing module using embedded jetty. 
-	â€¢	Failure recovery and robust unit tests. ",,
-,projects,Carnegie Mellon University ,Fall 2014 ,"Multi-Sensored Sleep Quality Monitoring System 
-",Mobile and Pervasive Computing Course Project ,"â€¢ Android wear and phone applications to synchronously collect accelerometer and heart rate 
-data from smart watch and recoding a video from cell phone. 
-	â€¢	Plot raw data and analyzed results on android phone. 
-	â€¢	Detect movement and major events during the test and label on the video. ",,
-,projects,Zhejiang University,Fall 2012,Personal Blog Website,Web Application Course Project,"â€¢ Designed a parser using htmlParser module in Python to compare merchandize prices between Amazon.cn and Taobao.com. 
-	â€¢	Designed a personal website based on Django. 
-	â€¢	Designed a fully functional blog that supports basic blog usage. â€¨
-",,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
+type,organization ,time,title,inline-des,descriptionEducation,Zhejiang University,2010 - 2014,Bachelor‰Ûªs degree - Computer Science & Technology ,,Education,Carnegie Mellon University,2014 - 2015,Master‰Ûªs degree - Information Technology (Mobility),,careers,Insigma Hengtian Software Ltd,2013.11 - 2014.2,Software Engineer ,,"	‰Û¢	Participated in building a re-factorization and automated analysis tool for legacy financial system ‰ÛÒ BlueMorpho. 	‰Û¢	Completed the Dataflow analysis module that slices out all the statements that influence a given variable of interest. 	‰Û¢	Encapsulated the Dataflow analysis module as a web service.	‰Û¢	Integrated with front end site and enhanced front end functions. "projects,Carnegie Mellon University ,Fall 2014 ,"Map-Reduce Engine ",Distributed System Course Project ,"	‰Û¢	Implement a Map-Reduce Facility similar to Hadoop. 	‰Û¢	Internal RESTful message and file passing module using embedded jetty. 	‰Û¢	Failure recovery and robust unit tests. "projects,Carnegie Mellon University ,Fall 2014 ,"Multi-Sensored Sleep Quality Monitoring System ",Mobile and Pervasive Computing Course Project ,"‰Û¢ Android wear and phone applications to synchronously collect accelerometer and heart rate data from smart watch and recoding a video from cell phone. 	‰Û¢	Plot raw data and analyzed results on android phone. 	‰Û¢	Detect movement and major events during the test and label on the video. "projects,Zhejiang University,Fall 2012,Personal Blog Website,Web Application Course Project,"‰Û¢ Designed a parser using htmlParser module in Python to compare merchandize prices between Amazon.cn and Taobao.com. 	‰Û¢	Designed a personal website based on Django. 	‰Û¢	Designed a fully functional blog that supports basic blog usage. ‰Û¬"
