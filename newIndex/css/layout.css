@@ -281,12 +281,12 @@ ul#nav li.current a { color: #F06000; }
 }
 
 #resume ul.des-detail {
-  list-style : square inside;
+  list-style: square outside;
 }
 
 #resume ul.des-detail li {
   line-height: 15px;
-  margin-bottom: 1px;
+  margin-bottom: 10px;
 }
 
 /*----------------------------------------------*/
@@ -927,9 +927,56 @@ call-to-action .button {
    border: none;
 }
 
+/* ------------------------------------------------------------------ */
+/* i. Bloc Section
+/* ------------------------------------------------------------------ */
+
+#blog {
+   background: #448280;
+   padding-top: 96px;
+   padding-bottom: 66px;
+   overflow: hidden;
+}
+
+#blog a, #blog a:visited  { color: #fff; }
+#blog a:hover, #blog a:focus { color: #11ABB0; }
+
+#blog h2 {
+   font: 22px/30px 'opensans-bold', sans-serif;
+   color: #fff;
+   margin-bottom: 12px;
+}
+#blog p {
+   line-height: 30px;
+   color: #ECEAEA;
+}
+#blog .profile-pic {
+   position: relative;
+   width: 120px;
+   height: 120px;
+   border-radius: 100%;
+}
+#blog .contact-details { width: 41.66667%; }
+#blog .download {
+   width: 58.33333%;
+   padding-top: 6px;
+}
+#blog .main-col { padding-right: 5%; }
+#blog .download .button {
+   margin-top: 6px;
+   background: #60A0B9;
+}
+#blog .download .button:hover {
+   background: #fff;
+   color: #2B2B2B;
+}
+#blog .download .button i {
+   margin-right: 15px;
+   font-size: 20px;
+}
 
 /* ------------------------------------------------------------------ */
-/* i. Footer
+/* j. Footer
 /* ------------------------------------------------------------------ */
 
 footer {
