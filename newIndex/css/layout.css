@@ -68,12 +68,12 @@ header .banner-text h3 {
    font: 18px/1.9em 'librebaskerville-regular', serif;
    color: #4C4C4C;
    margin: 0 auto;
-   width: 70%;
+   width: 80%;
    text-shadow: 0px 1px 5px rgba(164, 206, 237, 1);
 }
 header .banner-text h3 span,
 header .banner-text h3 a {
-   /* color: #fff; */
+   color: #E76710;
 }
 header .banner-text hr {
    width: 60%;
@@ -140,7 +140,7 @@ header .scrolldown a:hover { color: #11ABB0; }
    left: 0;
    top: 0;
 }
-.opaque { background-color: #333; }
+.opaque { background-color: #60A0B9; }
 .lightOpaque { background-color: rgba(98, 167, 184, 0.5);}
 /* hide toggle button */
 #nav-wrap > a.mobile-btn { display: none; }
@@ -187,7 +187,7 @@ ul#nav li.current a { color: #F06000; }
 /* ------------------------------------------------------------------ */
 
 #about {
-   background: #2B2B2B;
+   background: #448280;
    padding-top: 96px;
    padding-bottom: 66px;
    overflow: hidden;
@@ -203,7 +203,7 @@ ul#nav li.current a { color: #F06000; }
 }
 #about p {
    line-height: 30px;
-   color: #7A7A7A;
+   color: #ECEAEA;
 }
 #about .profile-pic {
    position: relative;
@@ -219,7 +219,7 @@ ul#nav li.current a { color: #F06000; }
 #about .main-col { padding-right: 5%; }
 #about .download .button {
    margin-top: 6px;
-   background: #444;
+   background: #60A0B9;
 }
 #about .download .button:hover {
    background: #fff;
