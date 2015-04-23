@@ -154,7 +154,12 @@
                         <div class="twelve columns">
                            <h3>{{exp.Org}}</h3>
                            <p class="info">{{exp.Position}} <span>&bull;</span> <em class="date">{{exp.eTime}}</em></p>
-                           <p>{{ exp.des }}</p>
+                           <ul class="des-detail" ng-hide="exp.desRows.length < 2">
+                              <li ng-repeat="row in exp.desRows">
+                                    {{ row }}
+                              </li>
+                           </ul>
+
                         </div>
                   </div> <!-- item end -->
                </div> <!-- main-col end -->

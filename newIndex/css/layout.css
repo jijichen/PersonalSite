@@ -140,7 +140,7 @@ header .scrolldown a:hover { color: #11ABB0; }
    left: 0;
    top: 0;
 }
-.opaque { background-color: #60A0B9; }
+.opaque { background-color: #448280; }
 .lightOpaque { background-color: rgba(98, 167, 184, 0.5);}
 /* hide toggle button */
 #nav-wrap > a.mobile-btn { display: none; }
@@ -180,7 +180,6 @@ ul#nav li a {
 
 ul#nav li a:active { background-color: transparent !important; }
 ul#nav li.current a { color: #F06000; }
-
 
 /* ------------------------------------------------------------------ */
 /* c. About Section
@@ -279,6 +278,15 @@ ul#nav li.current a { color: #F06000; }
 #resume .date {
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
+}
+
+#resume ul.des-detail {
+  list-style : square inside;
+}
+
+#resume ul.des-detail li {
+  line-height: 15px;
+  margin-bottom: 1px;
 }
 
 /*----------------------------------------------*/

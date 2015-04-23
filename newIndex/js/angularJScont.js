@@ -5,7 +5,11 @@
         var processCSVRaw = function(data) {
             Papa.parse(data, {
                 complete: function(results) {
-                    console.log("Finished:", results.data);
+                    results.data.forEach( function(element) {
+                        element.desRows = element.des.split('\\\\#');
+                        console.log(element);
+                        console.log(element.desRows.length);
+                    });
                     $scope.csvData = results.data;
                 },
                 header: true
