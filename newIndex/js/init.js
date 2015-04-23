@@ -88,10 +88,10 @@
 	   }
       else {
          if (y < h*.20) {
-            nav.removeClass('opaque').fadeIn('fast');
+            nav.addClass('lightOpaque').removeClass('opaque').fadeIn('fast');
          }
          else {
-            nav.addClass('opaque').fadeIn('fast');
+            nav.removeClass('lightOpaque').addClass('opaque').fadeIn('fast');
          }
       }
 
@@ -161,7 +161,7 @@
                $('#image-loader').fadeOut();
                $('#message-warning').hide();
                $('#contactForm').fadeOut();
-               $('#message-success').fadeIn();   
+               $('#message-success').fadeIn();
             }
             // There was an error
             else {
