@@ -104,6 +104,6 @@ Below are what I wrote:
 2. django-imagekit	(For image process)
 3. Python-PIL	  (For image process)
 4. django-ckeditor (rich text editor)
-
+5. django-angular
 
 
